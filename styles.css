@@ -1,0 +1,66 @@
+:root{
+  --bg:#0b0b0b;
+  --card:#0f1720;
+  --accent:#b8b8b8;
+  --muted:#9aa0a6;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+html,body,#app{height:100%}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,#050505,#0b0b0b);
+  margin:0;padding:20px;color:#e6e6e6;
+}
+.container{max-width:1000px;margin:0 auto}
+header{display:flex;flex-direction:column;gap:4px;margin-bottom:14px}
+header h1{margin:0;font-size:28px;color:#f3f4f6;letter-spacing:0.5px}
+.subtitle{margin:0;color:var(--muted)}
+main{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-section, .list-section{background:linear-gradient(180deg,var(--card),#0b1320);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.03)}
+.row{display:flex;flex-direction:column;margin-bottom:10px}
+.row label{font-size:13px;color:var(--muted);margin-bottom:6px}
+.row input[type=text], .row input[type=date], .row input[type=number], .row select{padding:10px;border:1px solid rgba(255,255,255,0.06);border-radius:6px;background:transparent;color:var(--muted)}
+.actions{display:flex;gap:8px}
+.actions button{background:#e6e6e6;color:#0b0b0b;padding:10px 14px;border-radius:6px;border:1px solid #bdbdbd;cursor:pointer;font-weight:700}
+.actions button:hover{background:#ffffff}
+.actions button:focus{outline:2px solid #fafafa;outline-offset:2px}
+.actions button#clear-form{background:#b34747;color:#fff;border:1px solid #8a2b2b}
+.controls{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+.controls input[type=text]{flex:1;padding:8px;border:1px solid rgba(255,255,255,0.04);border-radius:6px;background:transparent;color:var(--muted)}
+.workout-list{list-style:none;padding:0;margin:0}
+.workout-item{display:flex;justify-content:space-between;align-items:center;padding:10px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.workout-meta{display:flex;gap:10px;align-items:center}
+.badge{background:#1f2933;color:var(--accent);padding:6px 8px;border-radius:6px;font-weight:700}
+.small{color:var(--muted);font-size:13px}
+.item-actions button{background:transparent;border:1px solid transparent;color:var(--muted);cursor:pointer;margin-left:6px}
+.item-actions button.delete{color:#b34747}
+@media (max-width:800px){
+  main{grid-template-columns:1fr}
+}
+
+.hidden{display:none}
+.view{margin-bottom:18px}
+.row-row{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.row-row input{flex:1;padding:8px;border:1px solid rgba(255,255,255,0.04);border-radius:6px;background:transparent;color:var(--muted)}
+.workout-list .small{padding:10px;color:var(--muted)}
+
+/* top navigation */
+.top-nav{display:flex;gap:8px;justify-content:flex-end;margin:12px 0}
+.nav-btn{background:#e6e6e6;border:1px solid #bdbdbd;padding:8px 12px;border-radius:6px;cursor:pointer;color:#0b0b0b;font-weight:700}
+.nav-btn:hover{background:#ffffff}
+
+/* exercise blocks */
+.exercise-blocks{display:flex;flex-direction:column;gap:12px;margin-bottom:12px}
+.exercise-block{background:linear-gradient(180deg,#0f1418,#0b0f12);border:1px solid rgba(255,255,255,0.03);padding:12px;border-radius:8px}
+.exercise-block .header{display:flex;justify-content:space-between;align-items:center}
+.exercise-block .sets{margin-top:8px}
+.exercise-block .set-row{display:flex;gap:8px;align-items:center;margin-bottom:6px}
+.exercise-block input[type=number]{width:90px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:8px;border-radius:6px}
+.exercise-block .remove-ex{background:#b34747;color:#fff;border:none;padding:8px;border-radius:6px;cursor:pointer;font-weight:700}
+.exercise-block .remove-ex:hover{background:#a03434}
+
+.item-actions button{background:#e6e6e6;color:#0b0b0b;border:1px solid #bdbdbd;padding:6px 8px;border-radius:6px;font-weight:600}
+.item-actions button.delete{background:#b34747;color:#fff;border:1px solid #8a2b2b}
+.item-actions button:hover{filter:brightness(1.03)}

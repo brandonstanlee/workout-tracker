@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Workout Tracker</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Training Tracker</h1>
+      <p class="subtitle">Training program sprint: sessions, exercises, sets</p>
+    </header>
+
+    <nav class="top-nav">
+      <button id="nav-home" class="nav-btn">Home</button>
+      <button id="nav-history" class="nav-btn">Workout History</button>
+    </nav>
+
+    <main>
+      <!-- Home view -->
+      <section id="view-home" class="view">
+        <h2>Welcome</h2>
+        <p class="small">My Training Tracker helps you keep track of your workout data, allowing you to log your workout information and view your workout history. To get started click "Start Workout", to view previous workouts, click "Workout History".</p>
+        <p class="small">To get started click "Start Workout", to view previous workouts, click "Workout History".</p>
+        <div class="actions">
+          <button id="btn-start">Start Workout</button>
+          <button id="btn-history">Workout History</button>
+        </div>
+      </section>
+
+      <!-- Start session view -->
+      <section id="view-start" class="view hidden form-section">
+        <h2>Create a New Workout</h2>
+        <p class="small">Enter the workout name and date and click "Start Workout". This will take roughly one minute to set up.</p>
+        <div class="row">
+          <label for="session-name">Workout Name</label>
+          <input id="session-name" type="text" placeholder="e.g., Upper Body" />
+        </div>
+        <div class="row">
+          <label for="session-date-input">Date</label>
+          <input id="session-date-input" type="date" />
+        </div>
+        <div class="actions">
+          <button id="start-session">Start Workout</button>
+          <button id="cancel-start">Cancel</button>
+        </div>
+      </section>
+
+      <!-- Workout logging view -->
+      <section id="view-workout" class="view hidden form-section">
+  <h2 id="workout-title">Logging</h2>
+
+        <div class="row-row" style="margin-bottom:8px;">
+          <input id="new-ex-name" type="text" placeholder="New exercise name" />
+          <button id="add-exercise">Add Exercise</button>
+        </div>
+
+        <div id="exercise-blocks" class="exercise-blocks"></div>
+
+        <div class="actions">
+          <button id="finish-session">Finish Session</button>
+          <button id="cancel-session">Cancel</button>
+        </div>
+      </section>
+
+      <!-- History view -->
+      <section id="view-history" class="view hidden list-section">
+        <h2>Session History</h2>
+        <ul id="session-list" class="workout-list"></ul>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
